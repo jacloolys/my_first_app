@@ -26,7 +26,16 @@
         <li class="active">
 		<%= link_to "New Tweet Page", new_tweet_path %>
         </li>
-        <li><a href="#">Contact</a></li>
+        <li >
+        	<% if user_signed_in? %>
+        	<%= link_to "Log Out", destroy_user_session_path, method: "delete" %>
+
+
+        	<% else %> 
+		<%= link_to "Sign Up", new_user_registration_path %>
+		<% end %>
+
+		        </li>
         
       </ul>
       
@@ -46,7 +55,17 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<div class="container">
+<% flash.each do |key, value| %>
+ <div class="alert alert-<%= key %>">
+ 	<%= value %>
+ </div>
+<% end %>
+
+
 <%= yield %>
+</div>
 
 </body>
 </html>
