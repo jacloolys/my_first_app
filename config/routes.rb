@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   match 'processform', to: 'tweets#process_form_to_follow_user', as: :process_form_to_follow_user, via: [:post]
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  get 'myprofile', to: 'static_pages#my_profile_page', as: "my_profile_page"
 
   # Example resource route with options:
   #   resources :products do

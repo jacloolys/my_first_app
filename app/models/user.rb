@@ -30,6 +30,8 @@ has_many :passive_relationships, class_name:  "Relationship",
     following.include?(other_user)
   end
 
+#Mounting picture for CarrierWave
+mount_uploader :picture, PictureUploader
 
 
 end

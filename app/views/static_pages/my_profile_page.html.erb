@@ -1,0 +1,7 @@
+My Profile Page
+
+<%= image_tag current_user.picture %>
+
+<% current_user.tweets.each do |tweet| %>
+	<%= tweet.content %> <br>
+	<% end %>

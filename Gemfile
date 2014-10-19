@@ -19,6 +19,10 @@ gem 'simple_form'
 gem 'devise'
 #This is the Gem we are used for User Management
 
+
+gem 'carrierwave'
+#This is for the profile picture functionality. 
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
