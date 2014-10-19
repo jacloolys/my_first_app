@@ -1,0 +1,8 @@
+<% @users.each do |user| %>
+
+	<%= simple_form_for user, url: process_form_to_follow_user_path, method: "post" do |f| %>
+		<%= user.email %>
+		<%= f.input "user_to_follow", as: "hidden", input_html: {value: user.id} %>
+		<%= f.submit "Follow", class: "btn btn-primary" %><br>
+	<% end %>
+<% end %>
